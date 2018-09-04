@@ -4,11 +4,15 @@
   "description": "JavaScript development environment",
   "scripts": {
     "prestart": "babel-node buildScripts/startMessage.js",
-    "start": "npm-run-all --parallel security-check open:src",
+    "start": "npm-run-all --parallel security-check open:src lint:watch test:watch",
+    "lint": "esw webpack.config.* src buildScripts --color",
+    "lint:watch": "npm run lint -- --watch",
     "open:src": "babel-node buildScripts/srcServer.js",
     "security-check": "nsp check",
     "ngrok": "./ngrok http 3000",
-    "share": "npm-run-all --parallel open:src ngrok"
+    "share": "npm-run-all --parallel open:src ngrok",
+    "test": "mocha --reporter progress buildScripts/testSetup.js \"src/**/*.test.js\"",
+    "test:watch": "npm run test -- --watch"
   },
   "author": "Travis Lloyd",
   "license": "Lloyddm",
