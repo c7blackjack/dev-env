@@ -18,7 +18,7 @@ export default {
      //This creates a HTML file that references bundle.js
      new HtmlWebpackPlugin({
       template: 'src/index.html',
-      inject = true
+      inject: true
      })
   ],
 

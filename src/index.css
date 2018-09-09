@@ -3,5 +3,9 @@ body {
 }
 
 table th {
-    padding: 5px;
+    padding: 15px;
+}
+
+table td {
+    align-content: center;
 }
