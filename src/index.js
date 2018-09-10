@@ -11,6 +11,7 @@ const rollbar = new Rollbar({
   captureUncaught: true,
   captureUnhandledRejections: true
 });
+window.onerror("TestRollbarError: testing window.onerror", window.location.href);
 
 // record a generic message and send it to Rollbar
 rollbar.log("Hello world!");

@@ -3,6 +3,17 @@
 
     <head>
         <meta charset="UTF-8">
+        <script>
+            var Rollbar = require("rollbar");
+            var rollbar = new Rollbar({
+            accessToken: '0618c3af6e4244d98af30b1eaa4db6e9',
+            captureUncaught: true,
+            captureUnhandledRejections: true
+            });
+        
+            // record a generic message and send it to Rollbar
+            rollbar.log("Hello world!");
+        </script>
     <link href="/main.163a7c09011faba78cf49592011191d8.css" rel="stylesheet"></head>
     <body>
         <h1>Users</h1>
@@ -14,11 +25,11 @@
                 <th>Last Name</th>
                 <th>Email</th>
             </thead>
-            <tbody id="users">
+            <tbody id="user">
 
             </tbody>
         </table>
-    <script type="text/javascript" src="/vendor.9e5918d19a6d78d2bc3b.js"></script><script type="text/javascript" src="/main.05b7c8f679fb9f1fe2c5.js"></script></body>
+    <script type="text/javascript" src="/vendor.9e5918d19a6d78d2bc3b.js"></script><script type="text/javascript" src="/main.1b3a254db3b0bbf22be8.js"></script></body>
 </html>
 
 
